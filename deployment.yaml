@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-java-deployment
+  labels:
+    app: frontend-java
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-java
+  template:
+    metadata:
+      labels:
+        app: frontend-java
+    spec:
+      containers:
+      - name: frontend-java
+        image: frontend-java:1.14.2
+        ports:
+        - containerPort: 8090
