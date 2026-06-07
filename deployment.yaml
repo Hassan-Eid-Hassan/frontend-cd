@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: frontend-java
-        image: frontend-java:1.14.2
+        image: hassaneid/frontend:v2
         ports:
         - containerPort: 8090
